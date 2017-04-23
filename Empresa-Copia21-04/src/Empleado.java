@@ -1,6 +1,6 @@
 
 public class Empleado extends Persona{
-	private double sueldo_bruto;
+	private double sueldo_bruto_anual;
 	private String departamento;
 
 	
@@ -15,7 +15,7 @@ public class Empleado extends Persona{
 	 */
 	public Empleado(String nombre, String apellido, int edad, double sueldo_bruto, String departamento) {
 		super(nombre, apellido, edad);
-		this.sueldo_bruto = sueldo_bruto;
+		this.sueldo_bruto_anual = sueldo_bruto;
 		this.departamento = departamento;
 	}
 
@@ -26,7 +26,7 @@ public class Empleado extends Persona{
 	 * @return Devuelve un double con el salario del empleado.
 	 */
 	public double getSueldo_bruto() {
-		return sueldo_bruto;
+		return sueldo_bruto_anual;
 	}
 
 	
@@ -36,7 +36,7 @@ public class Empleado extends Persona{
 	 * @param sueldo_bruto Salario a establecer para el empleado.
 	 */
 	public void setSueldo_bruto(double sueldo_bruto) {
-		this.sueldo_bruto = sueldo_bruto;
+		this.sueldo_bruto_anual = sueldo_bruto;
 	}
 	
 	@Override
@@ -49,7 +49,7 @@ public class Empleado extends Persona{
 	}
 	
 	public double calcular_salario_neto(){
-		return this.sueldo_bruto*0.80;
+		return this.sueldo_bruto_anual*0.80;
 	}
 
 	
